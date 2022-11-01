@@ -45,7 +45,7 @@ public class LibraryManagementTest {
 	{
 		try {
 			lm.signOut();
-			Book.bookIdCounter = 1;
+			Book.resetBookIdCounter();
 		}
 		catch (Exception e) {
 		}

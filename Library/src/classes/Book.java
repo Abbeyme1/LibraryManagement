@@ -11,7 +11,7 @@ public class Book {
 	protected String author;
 	protected String borrowedBy; // userId
 	protected LocalDate lastDateToReturn;
-	public static int bookIdCounter = 1; // make it private later
+	private static int bookIdCounter = 1; 
 	
 	public Book(String title, String author) throws Exception{
 		
@@ -73,6 +73,13 @@ public class Book {
 		return bookId;
 	}
 	
+	public static void resetBookIdCounter()
+	{
+		bookIdCounter = 1;
+	}
+	
+	
+
 	public String toString()
 	{
 		String s = "BookId: "+ getBookId() + ", Title: "+ getTitle() + ", Auhtor: "+ getAuthor() +", BorrowedBy: "+ getBorrowedBy() + ", lastDateToReturn: "+ getLastDateToReturn();
